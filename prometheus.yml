@@ -1,0 +1,16 @@
+# from base_prometheus.yml
+global:
+  scrape_interval: 3s
+
+# Load a directory of JSON configs
+scrape_configs:
+  - job_name: 'stub'  # This is a default value, it is mandatory.
+    metrics_path: /alfresco/s/prometheus
+    scheme: http
+    static_configs:
+      - targets: ['ec2-54-224-31-118.compute-1.amazonaws.com:8080', 'ec2-54-224-31-118.compute-1.amazonaws.com:8082' ]
+    tls_config:
+      insecure_skip_verify: true
+    file_sd_configs:
+      - files:
+        - /etc/prometheus/targets/*.json
