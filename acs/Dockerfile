@@ -19,9 +19,3 @@ RUN java -jar $TOMCAT_DIR/alfresco-mmt/alfresco-mmt*.jar install \
               $TOMCAT_DIR/amps $TOMCAT_DIR/webapps/alfresco -directory -nobackup -force -verbose
 RUN java -jar $TOMCAT_DIR/alfresco-mmt/alfresco-mmt*.jar list $TOMCAT_DIR/webapps/alfresco
 
-
-
-#RUN java -jar $TOMCAT_DIR/alfresco-mmt/alfresco-mmt*.jar uninstall org.alfresco.integrations.google.docs $TOMCAT_DIR/webapps/alfresco
-#RUN java -jar $TOMCAT_DIR/alfresco-mmt/alfresco-mmt*.jar uninstall alfresco-share-services $TOMCAT_DIR/webapps/alfresco
-#RUN java -jar $TOMCAT_DIR/alfresco-mmt/alfresco-mmt*.jar uninstall alfresco-trashcan-cleaner $TOMCAT_DIR/webapps/alfresco
-#RUN java -jar $TOMCAT_DIR/alfresco-mmt/alfresco-mmt*.jar list $TOMCAT_DIR/webapps/alfresco
